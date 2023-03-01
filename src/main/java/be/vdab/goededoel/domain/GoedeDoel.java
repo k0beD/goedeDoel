@@ -17,4 +17,13 @@ public class GoedeDoel {
 	public BigDecimal getOpbrengst() {
 		return opbrengst;
 	}
+
+	@Override
+	public boolean equals(Object object) {
+		if (object instanceof GoedeDoel) {
+			var ander = (GoedeDoel) object;
+			return naam.equalsIgnoreCase(ander.naam);
+		}
+		return false;
+	}
 }
