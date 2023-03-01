@@ -32,4 +32,9 @@ class GoedeDoelTest {
 		assertThat(doel).isNotEqualTo(new GoedeDoel("WWF"));
 	}
 
+	@Test
+	void gelijkeDoelGevenHebbenDezelfdeHashCode() {
+		assertThat(doel).hasSameHashCodeAs(new GoedeDoel(NAAM));
+	}
+
 }
